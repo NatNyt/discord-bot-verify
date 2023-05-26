@@ -1,0 +1,21 @@
+{
+  "dependencies": {
+    "discord.js": "^14.11.0",
+    "path": "^0.12.7",
+    "yaml": "^2.3.0"
+  },
+  "name": "discord-vertify",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "dev": "nodemon src/index.ts",
+    "build": "tsc --project tsconfig.json",
+    "start": "node dist/index.js"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
