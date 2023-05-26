@@ -1,7 +1,7 @@
 import discord from 'discord.js'
 import { Commands } from '../util/interface.js'
 import Client from '../util/Client.js'
-import { NotAlreadyExists, Error, NoPermission,DoneCancel } from '../util/embed';
+import { NotAlreadyExists, Error, NoPermission,DoneCancel } from '../util/embed.js';
 export const commands : Commands = {
     name: 'destory',
     description: 'ยกเลิกการยืนยันตัวตน❌',

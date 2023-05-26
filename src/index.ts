@@ -11,10 +11,16 @@ const client = new Client({
 });
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+let isTypeScript = false;
+try {
+  require.resolve('ts-node');
+  isTypeScript = true;
+  console.log('You need complie it for production')
+} catch (error) {}
 
 console.log('Loading events...');
 fs.readdirSync(path.join(__dirname, 'events')).forEach((v, i) => {
-  if (v.endsWith('.ts') || v.endsWith('.js')) {
+  if (v.endsWith((isTypeScript)  ? '.ts' : '.js') || v.endsWith('.js')) {
     client.events.push(v);
     console.log('Client events:', v, 'preloading');
   }

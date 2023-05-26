@@ -17,6 +17,7 @@ export default {
     } catch (error) {}
     client.database = {guild: []}
     console.log(`${client?.user?.username}#${client?.user?.discriminator} is ready`);
+    if(!fs.existsSync(path.join(__dirname, '..', 'database'))) fs.mkdirSync(path.join(__dirname, '..', 'database'));
     if(!fs.existsSync(path.join(__dirname, '..', 'database', 'data.json'))) {
       console.log('Database file is not exists');
       console.log('Createing database file');
