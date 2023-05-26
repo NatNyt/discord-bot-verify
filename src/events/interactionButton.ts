@@ -1,5 +1,5 @@
 import discord from 'discord.js';
-import Client from '../util/Client';
+import Client from '../util/Client.js';
 export default {
   event: 'interactionCreate' as keyof discord.ClientEvents,
   handler: async (client:Client, interaction:discord.Interaction<discord.CacheType>) => {

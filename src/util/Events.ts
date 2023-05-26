@@ -1,4 +1,4 @@
-import Client from "./Client";
+import Client from "./Client.js";
 import discord from 'discord.js';
 
 export default class EventHandler {

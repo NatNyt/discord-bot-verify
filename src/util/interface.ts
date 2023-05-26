@@ -1,5 +1,5 @@
 import discord from 'discord.js'
-import Client from './Client';
+import Client from './Client.js';
 export interface Choice {
     type:string;
     name: string;

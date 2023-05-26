@@ -1,6 +1,6 @@
 import discord from 'discord.js'
-import { Button } from '../util/interface'
-import Client from '../util/Client'
+import { Button } from '../util/interface.js'
+import Client from '../util/Client.js'
 import { AlreadyVertify, Error, NoPermission, Vertify,Setupdone, NotAlreadyVertify, DoneCancel } from '../util/embed';
 export const button : Button = {
     name: 'cancel',

@@ -1,6 +1,6 @@
 import discord from 'discord.js'
-import { Commands } from '../util/interface'
-import Client from '../util/Client'
+import { Commands } from '../util/interface.js'
+import Client from '../util/Client.js'
 import { NotAlreadyExists, Error, NoPermission,DoneCancel } from '../util/embed';
 export const commands : Commands = {
     name: 'destory',

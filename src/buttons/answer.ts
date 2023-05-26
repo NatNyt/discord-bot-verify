@@ -1,7 +1,7 @@
 import discord from 'discord.js'
-import { Button } from '../util/interface'
-import Client from '../util/Client'
-import { AlreadyVertify, Error, NoPermission, Vertify, Setupdone, NotAlreadyVertify, DoneCancel, WrongAwsner, RoleCantEdit, DoneVertify } from '../util/embed';
+import { Button } from '../util/interface.js'
+import Client from '../util/Client.js'
+import { AlreadyVertify, Error, NoPermission, Vertify, Setupdone, NotAlreadyVertify, DoneCancel, WrongAwsner, RoleCantEdit, DoneVertify } from '../util/embed.js';
 export const button: Button = {
   name: 'answer 1',
   id: ['vertify_ps0', 'vertify_ps1', 'vertify_ps2', 'vertify_ps3'],

@@ -1,8 +1,8 @@
 import discord from 'discord.js';
-import Client from '../util/Client';
+import Client from '../util/Client.js';
 import fs from 'fs';
 import path from 'path';
-import config from '../util/configReader'
+import config from '../util/configReader.js'
 export default {
   event: 'ready' as keyof discord.ClientEvents,
   handler: async (client:Client) => {

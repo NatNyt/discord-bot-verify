@@ -1,7 +1,7 @@
 import discord from 'discord.js'
-import { Commands } from '../util/interface'
-import Client from '../util/Client'
-import { AlreadyExists, Error, NoPermission, Vertify,Setupdone } from '../util/embed';
+import { Commands } from '../util/interface.js'
+import Client from '../util/Client.js'
+import { AlreadyExists, Error, NoPermission, Vertify,Setupdone } from '../util/embed.js';
 export const commands : Commands = {
     name: 'setup',
     description: 'เช็ตค่าบอทเตรียมตัวสำหรับยืนยัน⭐',

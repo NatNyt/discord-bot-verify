@@ -1,5 +1,5 @@
 import discord, { SlashCommandBuilder } from 'discord.js';
-import { CommandHandler, Database, ButtonHandler, ActionVertify } from '../util/interface';
+import { CommandHandler, Database, ButtonHandler, ActionVertify } from '../util/interface.js';
 
 
 class Client extends discord.Client {

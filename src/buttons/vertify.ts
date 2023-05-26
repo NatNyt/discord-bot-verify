@@ -1,9 +1,9 @@
 import discord from 'discord.js'
-import { Button, DataCollection, DataVertify } from '../util/interface'
-import Client from '../util/Client'
-import { AlreadyExists, Error, NoPermission, Vertify,AlreadyVertify } from '../util/embed';
-import {data} from '../util/data';
-import shuffleArray from '../util/shuffle';
+import { Button, DataCollection, DataVertify } from '../util/interface.js'
+import Client from '../util/Client.js'
+import { AlreadyExists, Error, NoPermission, Vertify,AlreadyVertify } from '../util/embed.js';
+import {data} from '../util/data.js';
+import shuffleArray from '../util/shuffle.js';
 export const button : Button = {
     name: 'vertify',
     id: 'verify_ps',
