@@ -19,6 +19,7 @@ token: #Paste toke bot
 applicationID: "" #Paste Application ID
 ```
 ## 📚 Add data
-You can add data for hard to bypass it on `src/utils/data.ts`
+You can add data for hard to bypass it on `src/utils/data.ts`<br/>
+You can download data [Download](https://cdn.discordapp.com/attachments/1005749218159362078/1111661598315126855/data.rar) and insert it `src/data`
 ## 📱 Contact
 Discord : Kusonoki Masashige#2946
