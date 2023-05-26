@@ -3,9 +3,12 @@ import Client from '../util/Client.js';
 import fs from 'fs';
 import path from 'path';
 import config from '../util/configReader.js'
+import { fileURLToPath } from 'url';
 export default {
   event: 'ready' as keyof discord.ClientEvents,
   handler: async (client:Client) => {
+    const __filename = fileURLToPath(import.meta.url);
+    const __dirname = path.dirname(__filename);
     let isTypeScript = false;
     try {
       require.resolve('ts-node');
