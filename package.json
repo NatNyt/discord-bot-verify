@@ -9,7 +9,6 @@
   "main": "index.js",
   "devDependencies": {},
   "scripts": {
-    "dev": "nodemon src/index.ts",
     "build": "tsc --project tsconfig.json",
     "start": "node src/index.js"
   },

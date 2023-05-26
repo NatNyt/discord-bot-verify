@@ -51,5 +51,5 @@ export interface DataCollection{
 export interface ActionVertify {
     userID: string;
     correct: string;
-    data: DataCollection[]
+    data: DataCollection[],
 }

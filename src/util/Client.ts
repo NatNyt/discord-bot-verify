@@ -1,5 +1,5 @@
 import discord, { SlashCommandBuilder } from 'discord.js';
-import { CommandHandler, Database, ButtonHandler, ActionVertify } from '../util/interface.js';
+import { CommandHandler, Database, ButtonHandler, ActionVertify, DataVertify } from '../util/interface.js';
 
 
 class Client extends discord.Client {
@@ -9,6 +9,7 @@ class Client extends discord.Client {
     public database: Database = {};
     public buttonHandler: ButtonHandler[] = [];
     public cacheVerify: ActionVertify[] = [];
+    public dataEmoji: DataVertify[] = [];
 }
 
 export default Client

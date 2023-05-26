@@ -17,6 +17,20 @@ export default {
     } catch (error) {}
     client.database = {guild: []}
     console.log(`${client?.user?.username}#${client?.user?.discriminator} is ready`);
+    console.log('Start reading data captcha');
+    (async (client:Client) => {
+      if(!fs.existsSync(path.join(__dirname, '..', 'data'))) fs.mkdirSync(path.join(__dirname, '..', 'data'));
+      const data = (await import('../util/dataReader.js')).default;
+      const dataUtlis = (await import('../util/data.js')).data;
+      const mergedData = [...data];
+      for (const obj of dataUtlis) {
+        if (!mergedData.some(item => item.title === obj.title) && !data.some(item => item.title === obj.title)) {
+          mergedData.push(obj);
+        }
+      }
+      client.dataEmoji = mergedData;
+      console.log('Loading emoji captcha done have ', client.dataEmoji.length)
+    })(client);
     if(!fs.existsSync(path.join(__dirname, '..', 'database'))) fs.mkdirSync(path.join(__dirname, '..', 'database'));
     if(!fs.existsSync(path.join(__dirname, '..', 'database', 'data.json'))) {
       console.log('Database file is not exists');
@@ -41,6 +55,7 @@ export default {
     client.commands = [];
     client.commandHandler = [];
     client.buttonHandler = [];
+    client.dataEmoji = [];
     const commandsList: string[] = fs.readdirSync(path.join(__dirname, '..', 'commands'))
     for (let i = 0; i < commandsList.length; i++) {
       const v = commandsList[i];
@@ -97,5 +112,6 @@ export default {
       console.log('Error while uploading commands')
       console.error(error);
     }
+    console.log('Bot is ready')
   }
 }
