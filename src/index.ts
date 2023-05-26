@@ -3,12 +3,14 @@ import Client from "./util/Client.js";
 import fs from 'fs';
 import path from 'path';
 import config from './util/configReader.js';
+import { fileURLToPath } from 'url';
 
 const GatewayIntentBits = discord.IntentsBitField.Flags
 const client = new Client({
   intents: [GatewayIntentBits.DirectMessages,GatewayIntentBits.Guilds,GatewayIntentBits.GuildVoiceStates,GatewayIntentBits.GuildMessages,GatewayIntentBits.MessageContent,]
 });
-
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 console.log('Loading events...');
 fs.readdirSync(path.join(__dirname, 'events')).forEach((v, i) => {
