@@ -9,6 +9,7 @@ Discord bot verify someone join to our server
 ```bash
 git clone https://github.com/NatNyt/discord-bot-verify
 cd discord-bot-verify
+npm install
 npm run build
 npm run start
 ```
